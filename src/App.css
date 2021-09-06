@@ -1,0 +1,215 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+$bp-medium: 56.25em; 
+$bp-small: 37.5em;//600/16
+$bp-smaller: 31.25em;//500/16
+
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #1a1a1c;
+  color: #fff;
+}
+html{
+  font-size: 62.5%;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6.4rem;
+  color: #fff;
+}
+
+.search {
+  margin-bottom: 6.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.heading {
+  margin-bottom: 3.2rem;
+  text-align: center;
+}
+.App_form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App_input {
+  padding-left: 1.6rem;
+  width: 30rem;
+  height: 5rem;
+  border-radius: 1rem;
+  border: none;
+  background-image: linear-gradient(
+    -225deg,
+    #ac32e4 0%,
+    #7918f2 48%,
+    #4801ff 100%
+  );
+  transition: all 0.2s;
+
+  color: #e2e2e2;
+}
+.App_input:focus{
+  outline: none;
+  width: 400px;
+}
+@media only screen and (max-width:45.875em){
+  .App_input{
+    padding-left: 0.8rem;
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+
+  color: #e2e2e2;
+  }
+  .App_input:focus{
+    
+    outline: none;
+    width: 100px;
+  }
+  .App_input::placeholder {
+    color: #e2e2e2;
+    font-size: 1.2rem;
+  }
+   }
+
+.App_input::placeholder {
+  color: #e2e2e2;
+}
+
+.app_tag{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 8rem;
+  border-bottom: 1px solid rgba(78, 106, 199, 0.788);
+  width: 90rem;
+}
+.app_tag_1{
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  padding-right: 2.4rem;
+  justify-content: space-between;
+  /* min-width: 30rem; */
+  /* background-color: #7918f2; */
+  /* color: #7918f2; */
+}
+.app_tag_2{
+  flex: 0 0 60%;
+  display: flex;
+  align-items: center;
+  padding-right: 2.4rem;
+  justify-content: space-between;
+  /* min-width: 30rem; */
+  /* background-color: #7918f2; */
+}
+.img{
+  text-align: center;
+  width: 3rem;
+  margin-right: 1rem;}
+.name{
+  width: 15rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: start;
+}
+.symbol{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 5rem;
+  text-align: start;
+  
+}
+.price{
+  width: 11rem;
+}
+/* .volume{
+  width: 14rem;
+} */
+ .price_percent{
+  width: 10rem;
+} 
+.mkt_cap{
+  width: 9rem;
+}
+.link-button{
+  border: none;
+}
+
+
+@media only screen and (max-width:56.25em){
+  html{
+    font-size: 50%;
+  }
+  
+  }
+  @media only screen and (max-width:45.875em){
+    html{
+      font-size: 37.5%;
+    }
+    
+    }
+    @media only screen and (max-width:37.5em){
+      html{
+        font-size: 31.25%;
+      } }
+    
+
+      @media only screen and (max-width:25.93em){
+        html{
+          font-size: 25%;
+        }
+        
+        }
+  

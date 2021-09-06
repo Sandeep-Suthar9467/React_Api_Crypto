@@ -1,0 +1,38 @@
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+}
+
+.page_item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 100;
+    width: 4rem;
+    height: 2rem;
+    margin: 1.5rem;
+    color: white;
+  text-decoration: none;
+  cursor: pointer;
+    background-image: linear-gradient(
+        -225deg,
+        #ac32e4 0%,
+        #7918f2 48%,
+        #4801ff 100%
+      );
+}
+
+a {
+    text-decoration: none;
+    background-image: linear-gradient(
+        -225deg,
+        #ac32e4 0%,
+        #7918f2 48%,
+        #4801ff 100%
+      );
+}
