@@ -34,7 +34,7 @@
     justify-content: flex-start;
     align-items: center;
     height: 8rem;
-    border-bottom: 1px solid #d7d7d7;
+    border-bottom: 1px solid #000;
     width: 90rem;
   }
   
@@ -108,5 +108,5 @@
   }
   
   .green {
-    color: #11d811;
+    color: rgba(4, 150, 4, 0.945);
   }
