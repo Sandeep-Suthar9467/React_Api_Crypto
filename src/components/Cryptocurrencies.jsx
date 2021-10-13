@@ -47,9 +47,9 @@ const Cryptocurrencies = ({ simplified }) => {
         {
      (
       cryptos?.map((coin) => (
-        <Link key={coin.uuid} to={`/crypto/${coin.uuid}`}>
+        <Link key={coin.id} to={`/crypto/${coin.id}`}>
           <Coin
-            key={coin.uuid}
+            key={coin.id}
             rank={coin.rank}
             name={coin.name}
             image={coin.iconUrl}

@@ -1,11 +1,10 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 const cryptoApiHeaders = {
-  'x-access-token': process.env.REACT_APP_RAPIDAPI_KEY,
-  method: 'GET',
-  'Access-Control-Allow-Origin': '*'
- 
+  'x-rapidapi-key': process.env.REACT_APP_RAPIDAPI_KEY,
+  'x-rapidapi-host': process.env.REACT_APP_CRYPTO_RAPIDAPI_HOST,
 };
+
 const createRequest = (url) => ({ url, headers: cryptoApiHeaders });
 
 export const cryptoApi = createApi({
@@ -22,12 +21,9 @@ export const cryptoApi = createApi({
       query: (coinId) => createRequest(`/coin/${coinId}`),
     }),
     getCryptoHistory: builder.query({
-      query: ({ coinId, timeperiod }) => createRequest(`coin/${coinId}/history?timePeriod=${timeperiod}`),
+      query: ({ coinId, timeperiod }) => createRequest(`coin/${coinId}/history/${timeperiod}`),
     }),
-    getExchangesDescription:builder.query({
-      query: (coinId) => createRequest(`/exchange/${coinId}`),
-    })
   }),
 });
 
-export const { useGetCryptosQuery, useGetCryptoDetailsQuery, useGetExchangesQuery, useGetCryptoHistoryQuery,useGetExchangesDescriptionQuery } = cryptoApi;
+export const { useGetCryptosQuery, useGetCryptoDetailsQuery, useGetExchangesQuery, useGetCryptoHistoryQuery } = cryptoApi;
