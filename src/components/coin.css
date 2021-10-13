@@ -1,0 +1,32 @@
+.skeleton {
+    animation: skeleton-loading 1s linear;
+    transition: opacity 1s;
+  }
+  
+  .skeleton-text {
+    width: 100%;
+    margin-bottom: .25rem;
+    border-radius: .125rem;
+   
+  }
+  @keyframes skeleton-loading {
+    0% {
+      background-color: hsl(200, 20%, 70%);
+      opacity: 0;
+    }
+  50%{
+    background-color: hsl(200, 20%, 70%);
+      opacity: .5;
+  }
+    100% {
+      background-color: hsl(200, 20%, 95%);
+      opacity: 1;
+    }
+  }
+  .red {
+    color: #f00606;
+  }
+  
+  .green {
+    color: rgba(4, 150, 4, 0.945);
+  }
