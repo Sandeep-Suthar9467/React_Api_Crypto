@@ -1,6 +1,6 @@
 import React from 'react';
 import millify from 'millify';
-import { Collapse, Row, Col, Typography, Avatar } from 'antd';
+import { Collapse, Row, Col, Typography, Avatar ,Popover} from 'antd';
 import HTMLReactParser from 'html-react-parser';
 
 import { useGetExchangesQuery } from '../services/cryptoApi';
@@ -25,8 +25,9 @@ const Exchanges = () => {
       </Row>
       <Row>
         {exchangesList.map((exchange) => (
+           <Popover content={HTMLReactParser(exchange.description || '')} trigger="click">
           <Col span={24}>
-            <Collapse>
+            
               <Panel
                 key={exchange.id}
                 showArrow={false}
@@ -42,11 +43,11 @@ const Exchanges = () => {
                     <Col span={6}>{millify(exchange.marketShare)}%</Col>
                   </Row>
                   )}
-              >
-                {HTMLReactParser(exchange.description || '')}
+              >  
               </Panel>
-            </Collapse>
+            
           </Col>
+          </Popover>
         ))}
       </Row>
     </>
