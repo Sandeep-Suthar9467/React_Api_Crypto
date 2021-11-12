@@ -10,7 +10,7 @@ import Coin from './coin';
 const Cryptocurrencies = ({ simplified }) => {
   const count = simplified ? 10 : 100;
   const { data: cryptosList, isFetching } = useGetCryptosQuery(count);
-  console.log(isFetching)
+  const cryptosError = cryptosList.status == "success";
   const [cryptos, setCryptos] = useState();
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -22,7 +22,7 @@ const Cryptocurrencies = ({ simplified }) => {
     setCryptos(filteredData);
   }, [cryptosList, searchTerm]);
 
-  if (isFetching || cryptosList?.data) return <Loader />;
+  if (!cryptosError) return <Loader />;
 
   return (
     <>
